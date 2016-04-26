@@ -1,3 +1,4 @@
 class Signup < ActiveRecord::Base
-	belongs_to :contact, :event
+	belongs_to :contact 
+	belongs_to :event
 end
