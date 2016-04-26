@@ -1,4 +1,13 @@
 Rails.application.routes.draw do
+  root to: "roots#index"
+
+  resources :contacts
+  resources :events do
+    resources :event_activities
+  end
+  resources :signups
+  resources :activity_signups
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

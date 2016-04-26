@@ -1,0 +1,59 @@
+<%= form_for @contact do |f| %>
+
+  <% if @contact.errors.any? %>
+    <div id="error_explanation">
+      <ul>
+        <h2>errors:</h2>
+        <% @contact.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end  %>
+
+  <%= f.label :"first name" %>
+  <%= f.text_field :first_name %>
+
+  <%= f.label :"middle name" %>
+  <%= f.text_field :middle_name %>
+
+  <%= f.label :"last name" %>
+  <%= f.text_field :last_name %>
+
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+
+  <%= f.label :address %>
+  <%= f.text_field :address %>
+
+  <%= f.label :city %>
+  <%= f.text_field :city %>
+
+  <%= f.label :state %>
+  <%= f.text_field :state %>
+
+  <%= f.label :"zip code" %>
+  <%= f.text_field :zip %>
+
+  <%= f.label :"cell phone" %>
+  <%= f.text_field :cell_phone %>
+
+  <%= f.label :"home phone" %>
+  <%= f.text_field :home_phone %>
+
+  <%= f.label :"email address" %>
+  <%= f.text_field :email %>
+
+  <%= f.label :"twitter id" %>
+  <%= f.text_field :twitter %>
+
+  <%= f.label :"instagram id" %>
+  <%= f.text_field :instagram %>
+
+  <%= f.label :"hide pii" %>
+  <%= f.check_box :hide_pii %>
+
+
+  <%= f.submit %>
+
+<% end %>

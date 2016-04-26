@@ -1,0 +1,11 @@
+<h2><%= @event.title %> <%= @event.start_date %>
+<a href="/events/<%= @event.id %>/edit">(edit)</a></h2>
+
+<%= render 'form' %>
+
+<ul>
+	<li>
+		<%= link_to "contacts", contacts_path %>
+		<%= link_to "events", events_path %>
+	</li>
+</ul>

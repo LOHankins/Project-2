@@ -1,0 +1,2 @@
+class EventActivitiesController < ApplicationController
+end
