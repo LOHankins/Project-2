@@ -1,4 +1,4 @@
-class EventActivity < ActiveRecord::Base
+class Event_Activity < ActiveRecord::Base
 	belongs_to :event 
 	validates :title, :description, :start_time, :end_time, presence: true
 end

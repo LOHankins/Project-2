@@ -1,0 +1,18 @@
+<h2>Event Activities </h2>
+<h3><%= link_to "New Activity", new_event_event_activity_path %></h3>
+<ul>
+  <% @events.each do |event| %>
+    <li>
+      <a href="/events/<%= event.id %>">
+        <%= event.title %>
+        <%= event.start_date %>
+        <%= event.end_date %>
+        <%= event.city %>
+        <%= event.state %>
+        <%= event.cost %>
+        <%= event.notes %>
+
+      </a>
+    </li>
+  <% end %>
+</ul>
