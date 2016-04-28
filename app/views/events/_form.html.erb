@@ -11,27 +11,43 @@
     </div>
   <% end  %>
 
+  <span class="newactivity">
   <%= f.label :"title" %>
   <%= f.text_field :title %>
+  </span>
 
+  <span class="newactivity">
   <%= f.label :"start date" %>
   <%= f.text_field :start_date %>
+  </span>
 
+  <span class="newactivity">
   <%= f.label :"end date" %>
   <%= f.text_field :end_date %>
+  </span>
 
+  <span class="newactivity">
   <%= f.label :city %>
   <%= f.text_field :city %>
+  </span>
 
+  <span class="newactivity">
   <%= f.label :state %>
   <%= f.text_field :state %>
+  </span>
   
+  <span class="newactivity">
   <%= f.label :"cost" %>
   <%= f.text_field :cost %>
+  </span>
 
+  <span class="newactivity">
   <%= f.label :"notes" %>
   <%= f.text_field :notes %>
+  </span>
 
+  <span class="newactivity">
   <%= f.submit %>
+  </span>
 
 <% end %>

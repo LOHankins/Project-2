@@ -1,18 +1,21 @@
 <h2>Event Activities </h2>
 <h3><%= link_to "New Activity", new_event_event_activity_path %></h3>
 <ul>
-  <% @events.each do |event| %>
-    <li>
-      <a href="/events/<%= event.id %>">
-        <%= event.title %>
-        <%= event.start_date %>
-        <%= event.end_date %>
-        <%= event.city %>
-        <%= event.state %>
-        <%= event.cost %>
-        <%= event.notes %>
 
-      </a>
-    </li>
+  <%= @event.title %>
+  <% @eventactivities.each do |eventactivities| %>
+    <% if eventactivities.event_id == @event.id %>
+      <li>
+        <a href="/events/<%= @event.id %>/event_activities/<%= eventactivities.id %>/edit">
+          <%= eventactivities.title %>
+          <%= eventactivities.description %>
+          <%= eventactivities.start_time %>
+          <%= eventactivities.end_time %>
+          <%= eventactivities.city %>
+          <%= eventactivities.state %>
+
+        </a>
+      </li>
+    <% end %>
   <% end %>
 </ul>

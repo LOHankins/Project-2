@@ -1,7 +1,7 @@
 class EventActivitiesController < ApplicationController
   def index
     @eventactivities = Event_Activity.all
-    @events = Event.all
+    @event = Event.find(params[:event_id])
   end
 
   def new
@@ -24,10 +24,12 @@ class EventActivitiesController < ApplicationController
 
   def show
     @eventactivity = Event_Activity.find(params[:id])
+    @event = Event.find(params[:event_id])
   end
 
   def edit
     @eventactivity = Event_Activity.find(params[:id])
+    @event = Event.find(params[:event_id])
   end
 
   def update
@@ -45,11 +47,11 @@ class EventActivitiesController < ApplicationController
     @eventactivity = Event_Activity.find(params[:id])
     @eventactivity.destroy
 
-    redirect_to eventactivitys_path, notice: "#{@eventactivity.title} destroyed."
+    redirect_to event_activities_path, notice: "#{@eventactivity.title} destroyed."
   end
 
   private
   def eventactivity_params
-    params.require(:eventactivity).permit(:title, :description, :start_time, :end_time, :city, :state, :event_id)
+    params.require(:event_activity).permit(:title, :description, :start_time, :end_time, :city, :state, :event_id)
   end
 end

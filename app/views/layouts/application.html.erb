@@ -4,11 +4,45 @@
   <title>Reunion</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <!-- <link rel="stylesheet" type="text/css" href="css/jquery.countdown.css"> 
+  <script type="text/javascript" src="js/jquery.plugin.js"></script> 
+  <script type="text/javascript" src="js/jquery.countdown.js"></script> -->
+
+
+
+
   <%= csrf_meta_tags %>
 </head>
 <body>
 
-<%= yield %>
 
+<div class="row header">
+  <div class="column column-2">Logo</div>
+  <div class="column column-8">Hankins, Worthen, Redd Family reunion</div>
+  <div class="column column-2">
+<!--     <ul>
+      <li>Home</li>
+      <li>About</li>
+      <li>Contact</li>
+      <li>FAQ</li>
+    </ul> -->
+  </div>
+</div>
+
+
+<div class="row middle">
+  <div class="column column-2">-</div>
+  <div class="column column-8">
+
+	<%= yield %>
+
+  </div>
+  <div class="column column-2">-</div>
+</div>
+
+
+<div class="row footer">
+  <div class="column column-12">Reunion footer</div>
+</div>
 </body>
 </html>
