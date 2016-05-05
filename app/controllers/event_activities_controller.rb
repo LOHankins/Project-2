@@ -11,6 +11,8 @@ class EventActivitiesController < ApplicationController
 
   def create
     @event = Event.find(params[:event_id])
+    # A cleaner way to write this is:
+    # @eventactivity = @event.event_activities.new(eventactivity_params)
     @eventactivity = Event_Activity.new(eventactivity_params)
     @eventactivity.event = @event
 
