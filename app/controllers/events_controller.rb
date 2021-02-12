@@ -38,15 +38,15 @@ class EventsController < ApplicationController
 	end
 
 	def destroy
+    # indented too far
 	    @event = Event.find(params[:id])
 	    @event.destroy
 
 	    redirect_to events_path, notice: "#{@event.title} sucessfully destroyed"
 	end
 
-	private 
+	private
   	def event_params
     	params.require(:event).permit(:title, :start_date, :end_date, :city, :state, :cost, :notes)
   	end
 end
-
